@@ -44,3 +44,10 @@ export const assets = {
     search_icon,
     basket_icon,
 }
+
+export const menu_list =[
+    {
+        menu_name:"salad",
+        menu_image: fortuna
+    },
+]

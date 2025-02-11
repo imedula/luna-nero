@@ -5,7 +5,7 @@
     background: url('/header3.jpg') no-repeat center;
     background-size: cover;
     position: relative;
-    border-radius: 10px;
+    border-radius: 1000px;
 }
 .header-contents {
     position: absolute;
@@ -16,6 +16,7 @@
     max-width: 50%;
     bottom: 10%;
     left: 10vw;
+    animation: fadeIn 8s;
 }
 .header-contents h2 {
     font-weight: 500;
@@ -26,3 +27,36 @@
     color: white;
     font-size: 2vw;
 }
+.header-contents button {
+    border: none;
+    color: #747474;
+    font-weight: 500;
+    padding: 1vw 2.3vw;
+    background-color: white;
+    font-size: max(1vw,13px);
+    border-radius: 50px;
+}
+/* From Uiverse.io by elijahgummer */ 
+.txt {
+    position: relative;
+    font-family: sans-serif;
+    font-size: 1em;
+    letter-spacing: 4px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #fff 10%, #4d4d4d 20%);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 13s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  
+  @keyframes animate {
+    0% {
+      background-position: -500%;
+    }
+    100% {
+      background-position: 500%;
+    }
+  }
+  
