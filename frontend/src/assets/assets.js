@@ -16,10 +16,12 @@ import logoluna from './logoluna.png'
 import search_icon from './search_icon.png'
 import basket_icon from './basket_icon.png'
 import header from './header.jpg'
+import header2 from './header2.png'
 
 
 
 export const assets = {
+    header2,
     header,
     logoluna,
     logo,
