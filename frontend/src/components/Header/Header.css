@@ -1,5 +1,6 @@
 .header {
-    height: 40vw;
+    height: 35vw;
+    width: 100%;
     margin: 30px auto;
     background: url('/header3.jpg') no-repeat center;
     background-size: cover;
@@ -15,5 +16,13 @@
     max-width: 50%;
     bottom: 10%;
     left: 10vw;
+}
+.header-contents h2 {
+    font-weight: 500;
     color: white;
+    font-size: max(3.5vw,22px);
+}
+.header-contents p {
+    color: white;
+    font-size: 2vw;
 }
