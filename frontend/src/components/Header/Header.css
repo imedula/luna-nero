@@ -2,7 +2,7 @@
     height: 35vw;
     width: 100%;
     margin: 30px auto;
-    background: url('/header3.jpg') no-repeat center;
+    background: url('/header_room.jpg') no-repeat center;
     background-size: cover;
     position: relative;
     border-radius: 1000px;
@@ -20,12 +20,20 @@
 }
 .header-contents h2 {
     font-weight: 500;
-    color: white;
+    color: transparent;
     font-size: max(3.5vw,22px);
+    background-image: linear-gradient(
+      to right, #a8f3f3, #eb04f0
+    );
+    background-clip: text;
 }
 .header-contents p {
-    color: white;
+    color: transparent;
     font-size: 2vw;
+    background-image: linear-gradient(
+      to right, #a8f3f3, #411b03
+    );
+    background-clip: text;
 }
 .header-contents button {
     border: none;
@@ -46,7 +54,7 @@
     background: linear-gradient(90deg, #fff 10%, #4d4d4d 20%);
     background-repeat: no-repeat;
     background-size: 80%;
-    animation: animate 13s linear infinite;
+    animation: animate 19s linear infinite;
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
   }

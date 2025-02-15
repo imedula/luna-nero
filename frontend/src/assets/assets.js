@@ -1,5 +1,7 @@
-
+import header_room from './header_room.jpg'
 import logo from './logo.png'
+
+
 import angelcard from './angelcard.jpg'
 import blackgrimuar from './blackgrimuar.png'
 import fortuna from './fortuna.png'
@@ -15,18 +17,18 @@ import tilismasilver from './tilismasilver.png'
 import logoluna from './logoluna.png'
 import search_icon from './search_icon.png'
 import basket_icon from './basket_icon.png'
-import header from './header.jpg'
-import header2 from './header2.png'
-import header3 from './header3.jpg'
-import header4 from './header4.jpg'
+import candle_1 from './candle_1.jpg'
+import literature_1 from './literature_1.jpg'
+import statue_2 from './statue_2.jpg'
+import crystal_1 from './crystal_1.jpg'
 
 
 
 export const assets = {
-    header3,
-    header4,
-    header2,
-    header,
+    crystal_1,
+    statue_2,
+    literature_1,
+    candle_1,
     logoluna,
     logo,
     angelcard,
@@ -43,11 +45,24 @@ export const assets = {
     tilismasilver,
     search_icon,
     basket_icon,
+    header_room
 }
 
-export const menu_list =[
+export const menu_list = [
     {
-        menu_name:"salad",
-        menu_image: fortuna
+        menu_name:"სანთელი",
+        menu_image: candle_1
     },
+    {
+        menu_name:"ქანდაკება",
+        menu_image: statue_2
+    },
+    {
+        menu_name:"ლიტერატურა",
+        menu_image: literature_1
+    },
+    {
+        menu_name:"ქვები და კრისტალები",
+        menu_image: crystal_1
+    }
 ]

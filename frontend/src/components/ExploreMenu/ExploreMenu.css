@@ -1,0 +1,30 @@
+.explore-menu-list-item img {
+    width: 100px;  /* Adjust as needed */
+    height: 100px; /* Same as width to make it a perfect circle */
+    object-fit: cover; /* Ensures the image fits well inside the circle */
+    border-radius: 50%; /* This makes it a circle */
+    border: 2px solid #fff; /* Optional: Add a border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for effect */
+}
+.explore-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.explore-menu h1 {
+    color: #dc1212;
+    font-weight: 500;
+}
+.explore-menu-text {
+    max-width: 60%;
+    columns: #139db8;
+}
+.explore-menu-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    margin: 20px 0px;
+    overflow-x: scroll;
+}
