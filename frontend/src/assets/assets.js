@@ -21,10 +21,26 @@ import candle_1 from './candle_1.jpg'
 import literature_1 from './literature_1.jpg'
 import statue_2 from './statue_2.jpg'
 import crystal_1 from './crystal_1.jpg'
+import oil_1 from './oil_1.jpg'
+import plant_1 from './plant_1.jpg'
+import talisman_1 from './talisman_1.jpg'
+import tarot_1 from './tarot_1.jpg'
+import esoteric_item from './esoteric_item.jpg'
+import accessories_1 from './accessories_1.jpg'
+import fengshui_1 from './fengshui_1.jpg'
+import sticks_1 from './sticks_1.jpg'
 
 
 
 export const assets = {
+    sticks_1,
+    fengshui_1,
+    accessories_1,
+    esoteric_item,
+    tarot_1,
+    talisman_1,
+    plant_1,
+    oil_1,
     crystal_1,
     statue_2,
     literature_1,
@@ -64,5 +80,38 @@ export const menu_list = [
     {
         menu_name:"ქვები და კრისტალები",
         menu_image: crystal_1
+    },
+    {
+        menu_name:"ეთერზეთები",
+        menu_image: oil_1
+    },
+    {
+        menu_name:"მცენარეები",
+        menu_image: plant_1
+    },
+    {
+        menu_name:"თილისმები და ამულეტები",
+        menu_image: talisman_1
+    },
+    {
+        menu_name:"ტაროს დასტები და ორაკულები",
+        menu_image: tarot_1
+    },
+    {
+        menu_name:"ეზოთერიკული ნივთები",
+        menu_image: esoteric_item
+    },
+    {
+        menu_name:"მისტიკური აქსესუარები",
+        menu_image: accessories_1
+    },
+    {
+        menu_name:"ფენშუი ნივთები",
+        menu_image: fengshui_1
+    },
+    {
+        menu_name:"სურნელოვანი ჩხირები",
+        menu_image: sticks_1
     }
+
 ]

@@ -12,7 +12,7 @@
     display: flex;
     list-style: none;
     gap: 20px;
-    color: #C0c0c0;
+    color: var(--color-text);
     font-size: 18px;
 }
 .navbar-right {
@@ -25,7 +25,7 @@
   height: 50px;
   width: 120px;
   border-radius: 30px;
-  background: #333;
+  background: var(--color-background);
   justify-content: center;
   align-items: center;
   box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444,
@@ -34,7 +34,7 @@
   cursor: pointer;
   border: none;
   font-size: 16px;
-  color: rgb(161, 161, 161);
+  color: var(--color-text);
   transition: 0.3s;
 }
 .navbar button:hover {
@@ -46,6 +46,7 @@
 .navbar .active {
     padding-bottom: 2px;
     border-bottom: 2px solid #49557e;
+    color: white;
 }
 .navbar li {
     cursor: pointer;
