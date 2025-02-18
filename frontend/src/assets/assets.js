@@ -3,6 +3,19 @@ import header_room from './header_room.jpg'
 import logo from './logo.png'
 import basket_icon from './basket_icon.png'
 import search_icon from './search_icon.png'
+import add_icon_green from './add_icon_green.png'
+import add_icon_white from './add_icon_white.png'
+import bag_icon from './bag_icon.png'
+import cross_icon from './cross_icon.png'
+import facebook_icon from './facebook_icon.png'
+import linkedin_icon from './linkedin_icon.png'
+import logout_icon from './logout_icon.png'
+import parcel_icno from './parcel_icon.png'
+import  rating_starts from './rating_starts.png'
+import remove_icon_red from './remove_icon_red.png'
+import selector_icon from './selector_icon.png'
+import twitter_icon from './twitter_icon.png'
+
 
 
 
@@ -36,18 +49,18 @@ import item_12 from './item_12.jpg'
 
 
 export const assets = {
-    sticks_1,
-    fengshui_1,
-    accessories_1,
-    esoteric_item,
-    tarot_1,
-    talisman_1,
-    plant_1,
-    oil_1,
-    crystal_1,
-    statue_2,
-    literature_1,
-    candle_1,
+    // sticks_1,
+    // fengshui_1,
+    // accessories_1,
+    // esoteric_item,
+    // tarot_1,
+    // talisman_1,
+    // plant_1,
+    // oil_1,
+    // crystal_1,
+    // statue_2,
+    // literature_1,
+    // candle_1,
     logo,
     search_icon,
     basket_icon,
