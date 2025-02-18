@@ -1,22 +1,12 @@
+// page assets
 import header_room from './header_room.jpg'
 import logo from './logo.png'
-
-
-import angelcard from './angelcard.jpg'
-import blackgrimuar from './blackgrimuar.png'
-import fortuna from './fortuna.png'
-import gipsywitch from './gipsywitch.png'
-import harmonictaro from './harmonictaro.png'
-import labradoriti from './labradoriti.png'
-import occulttarot from './occulttarot.jpg'
-import runesoracle from './runesoracle.png'
-import santamuerte from './santamuerte.jpg'
-import santeli from './santeli.jpg'
-import tilismagolden from './tilismagolden.png'
-import tilismasilver from './tilismasilver.png'
-import logoluna from './logoluna.png'
-import search_icon from './search_icon.png'
 import basket_icon from './basket_icon.png'
+import search_icon from './search_icon.png'
+
+
+
+// menu list
 import candle_1 from './candle_1.jpg'
 import literature_1 from './literature_1.jpg'
 import statue_2 from './statue_2.jpg'
@@ -30,6 +20,19 @@ import accessories_1 from './accessories_1.jpg'
 import fengshui_1 from './fengshui_1.jpg'
 import sticks_1 from './sticks_1.jpg'
 
+// items for sale
+import item_1 from './item_1.png'
+import item_2 from './item_2.png'
+import item_3 from './item_3.png'
+import item_4 from './item_4.png'
+import item_5 from './item_5.jpg'
+import item_6 from './item_6.png'
+import item_7 from './item_7.jpg'
+import item_8 from './item_8.png'
+import item_9 from './item_9.jpg'
+import item_10 from './item_10.png'
+import item_11 from './item_11.png'
+import item_12 from './item_12.jpg'
 
 
 export const assets = {
@@ -45,20 +48,7 @@ export const assets = {
     statue_2,
     literature_1,
     candle_1,
-    logoluna,
     logo,
-    angelcard,
-    blackgrimuar,
-    fortuna,
-    gipsywitch,
-    harmonictaro,
-    labradoriti,
-    occulttarot,
-    runesoracle,
-    santamuerte,
-    santeli,
-    tilismagolden,
-    tilismasilver,
     search_icon,
     basket_icon,
     header_room
@@ -114,4 +104,15 @@ export const menu_list = [
         menu_image: sticks_1
     }
 
+]
+
+export const items_list = [
+    {
+        _id: "1",
+        name: "სანთელი",
+        image: "",
+        price: 12,
+        description: "lorem lorem lorem ",
+        category: "სანთელი"
+    }
 ]

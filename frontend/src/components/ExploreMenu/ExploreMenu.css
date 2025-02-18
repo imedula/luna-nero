@@ -1,10 +1,11 @@
 .explore-menu-list-item img {
-    width: 100px;  /* Adjust as needed */
-    height: 100px; /* Same as width to make it a perfect circle */
-    object-fit: cover; /* Ensures the image fits well inside the circle */
-    border-radius: 50%; /* This makes it a circle */
-    border: 2px solid #fff; /* Optional: Add a border */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for effect */
+    width: 100px;  
+    height: 100px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+    border: 2px solid #fff; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    cursor: pointer;  /* Ensures the entire clickable */
 }
 .explore-menu {
     display: flex;
@@ -17,10 +18,10 @@
 }
 .explore-menu-text {
     max-width: 60%;
-    columns: var(--color-text);
+    color: var(--color-text);
 }
 .explore-menu-list {
-    display: flex;
+    display:flex;
     justify-content: space-between;
     align-items: center;
     gap: 30px;
@@ -44,3 +45,12 @@
     background-color: var(--color-text);
     border: none;
 }
+.explore-menu-list-item .active {
+    border: 4px solid tomato;
+    padding: 2px;
+}
+.explore-menu-list-item img.active {
+    transform: scale(1.1); /* Slight zoom img effect */
+    transition: all 0.3s ease-in-out;
+ }
+ 
