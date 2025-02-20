@@ -1,23 +1,3 @@
-// page assets
-import header_room from './header_room.jpg'
-import logo from './logo.png'
-import basket_icon from './basket_icon.png'
-import search_icon from './search_icon.png'
-import add_icon_green from './add_icon_green.png'
-import add_icon_white from './add_icon_white.png'
-import bag_icon from './bag_icon.png'
-import cross_icon from './cross_icon.png'
-import facebook_icon from './facebook_icon.png'
-import linkedin_icon from './linkedin_icon.png'
-import logout_icon from './logout_icon.png'
-import parcel_icno from './parcel_icon.png'
-import  rating_starts from './rating_starts.png'
-import remove_icon_red from './remove_icon_red.png'
-import selector_icon from './selector_icon.png'
-import twitter_icon from './twitter_icon.png'
-
-
-
 
 // menu list
 import candle_1 from './candle_1.jpg'
@@ -48,19 +28,39 @@ import item_11 from './item_11.png'
 import item_12 from './item_12.jpg'
 
 
+// page assets
+import header_room from './header_room.jpg'
+import logo from './logo.png'
+import basket_icon from './basket_icon.png'
+import search_icon from './search_icon.png'
+import add_icon_green from './add_icon_green.png'
+import add_icon_white from './add_icon_white.png'
+import bag_icon from './bag_icon.png'
+import cross_icon from './cross_icon.png'
+import facebook_icon from './facebook_icon.png'
+import linkedin_icon from './linkedin_icon.png'
+import logout_icon from './logout_icon.png'
+import parcel_icno from './parcel_icon.png'
+import  rating_starts from './rating_starts.png'
+import remove_icon_red from './remove_icon_red.png'
+import selector_icon from './selector_icon.png'
+import twitter_icon from './twitter_icon.png'
+
+
 export const assets = {
-    // sticks_1,
-    // fengshui_1,
-    // accessories_1,
-    // esoteric_item,
-    // tarot_1,
-    // talisman_1,
-    // plant_1,
-    // oil_1,
-    // crystal_1,
-    // statue_2,
-    // literature_1,
-    // candle_1,
+    basket_icon,
+    add_icon_green,
+    add_icon_white,
+    bag_icon,
+    cross_icon,
+    facebook_icon,
+    linkedin_icon,
+    logout_icon,
+    parcel_icno,
+    rating_starts,
+    remove_icon_red,
+    selector_icon,
+    twitter_icon,
     logo,
     search_icon,
     basket_icon,
@@ -122,10 +122,66 @@ export const menu_list = [
 export const items_list = [
     {
         _id: "1",
-        name: "სანთელი",
-        image: "",
+        name: "სანთელი პირველი",
+        image: item_1,
         price: 12,
-        description: "lorem lorem lorem ",
+        description: "უზრუნველყოფს ჯანმრთელობასა და კეთილდღეობას",
         category: "სანთელი"
-    }
+    },
+    {
+        _id: "2",
+        name: "ამულეტი",
+        image: item_2,
+        price: 22,
+        description: " კარგია სტილისთვის",
+        category: "თილისმები და ამულეტები"
+    },
+    {
+        _id: "1",
+        name: "სანთელი პირველი",
+        image: item_3,
+        price: 12,
+        description: "უზრუნველყოფს ჯანმრთელობასა და კეთილდღეობას",
+        category: "თილისმები და ამულეტები"
+    },
+    {
+        _id: "1",
+        name: "სანთელი პირველი",
+        image: item_4,
+        price: 12,
+        description: "უზრუნველყოფს ჯანმრთელობასა და კეთილდღეობას",
+        category: "თილისმები და ამულეტები"
+    },
+    {
+        _id: "1",
+        name: "სანთელი პირველი",
+        image: item_5,
+        price: 12,
+        description: "უზრუნველყოფს ჯანმრთელობასა და კეთილდღეობას",
+        category: "თილისმები და ამულეტები"
+    },
+    {
+        _id: "1",
+        name: "სანთელი პირველი",
+        image: item_6,
+        price: 12,
+        description: "უზრუნველყოფს ჯანმრთელობასა და კეთილდღეობას",
+        category: "თილისმები და ამულეტები"
+    },
+    {
+        _id: "1",
+        name: "სანთელი პირველი",
+        image: item_7,
+        price: 12,
+        description: "უზრუნველყოფს ჯანმრთელობასა და კეთილდღეობას",
+        category: "თილისმები და ამულეტები"
+    },
+    {
+        _id: "1",
+        name: "სანთელი პირველი",
+        image: item_8,
+        price: 12,
+        description: "უზრუნველყოფს ჯანმრთელობასა და კეთილდღეობას",
+        category: "თილისმები და ამულეტები"
+    },
 ]
