@@ -9,10 +9,12 @@ const ItemDisplay = ({category}) => {
 
   return (
     <div className='item-display' id='item-display'>
-      <h2>თქვენთვის საინტერესო ნივთები</h2>
+      <h2>ჩვენთან ნახავთ... </h2>
       <div className="item-display-list">
         {items_list.map((item,index)=>{
-          return <ItemItem key={index} id={item._id} name={item.name} description={item.description} price={item.price} image={item.image} />
+          if (category==="All" || category===item.category) {
+             return <ItemItem key={index} id={item._id} name={item.name} description={item.description} price={item.price} image={item.image} />
+            }
         })}
       </div>
     </div>

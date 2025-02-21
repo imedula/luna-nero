@@ -7,6 +7,10 @@
 .navbar .logo {
     width: 110px;
     border-radius: 50%;
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444,
+    inset -5px -5px 10px #222;
+  font-family: "Damion", cursive;
+  cursor: pointer;
 }
 .navbar-menu {
     display: flex;
