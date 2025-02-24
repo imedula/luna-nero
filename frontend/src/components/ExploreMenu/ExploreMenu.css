@@ -53,4 +53,10 @@
     transform: scale(1.1); /* Slight zoom img effect */
     transition: all 0.3s ease-in-out;
  }
+ @media (max-width:1050px) {
+    .explore-menu-text {
+        max-width: 100%;
+        font-size: 14px;
+    }
+ }
  

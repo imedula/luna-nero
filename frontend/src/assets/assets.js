@@ -37,14 +37,15 @@ import add_icon_green from './add_icon_green.png'
 import add_icon_white from './add_icon_white.png'
 import bag_icon from './bag_icon.png'
 import cross_icon from './cross_icon.png'
-import facebook_icon from './facebook_icon.png'
-import linkedin_icon from './linkedin_icon.png'
 import logout_icon from './logout_icon.png'
 import parcel_icno from './parcel_icon.png'
 import  rating_starts from './rating_starts.png'
 import remove_icon_red from './remove_icon_red.png'
 import selector_icon from './selector_icon.png'
-import twitter_icon from './twitter_icon.png'
+import tiktok_logo from'./tiktok_logo.png'
+import instagram_logo from './instagram_logo.png'
+import facebook_logo from './facebook_logo.png'
+
 
 
 export const assets = {
@@ -53,14 +54,14 @@ export const assets = {
     add_icon_white,
     bag_icon,
     cross_icon,
-    facebook_icon,
-    linkedin_icon,
+    tiktok_logo,
+    instagram_logo,
+    facebook_logo,
     logout_icon,
     parcel_icno,
     rating_starts,
     remove_icon_red,
     selector_icon,
-    twitter_icon,
     logo,
     search_icon,
     basket_icon,
