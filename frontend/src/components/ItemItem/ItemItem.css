@@ -81,4 +81,18 @@
 .item-item-counter img {
     width: 20px;
 }
+.item-item-img-container {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .item-item-image {
+    width: 100%;
+    transition: transform 0.3s ease;
+  }
+  
+  .item-item-img-container:hover .item-item-image {
+    transform: scale(1.2);
+  }
   

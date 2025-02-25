@@ -1,56 +1,60 @@
-import React, { useState } from 'react';
-import './ContactForm.css';
+import React, { useState } from 'react'
+import './ContactForm.css'
+import { assets } from '../../assets/assets'
 
-const ContactForm = () => {
+const ContactForm = ({ setShowContact }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
-  });
+  })
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+  }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Here you can add logic to send the form data to an API or email service
-    alert('Message sent!');
-    setFormData({ name: '', email: '', message: '' });
-  };
+    e.preventDefault()
+    console.log(formData)
+    // Add form submission logic here
+  }
 
   return (
-    <form className="contact-form" onSubmit={handleSubmit}>
-      <h2>დაგვიტოვეთ შეტყობინება</h2>
-      <input
-        type="text"
-        name="name"
-        placeholder="Your Name"
-        value={formData.name}
-        onChange={handleChange}
-        required
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder="Your Email"
-        value={formData.email}
-        onChange={handleChange}
-        required
-      />
-      <textarea
-        name="message"
-        placeholder="Your Message"
-        value={formData.message}
-        onChange={handleChange}
-        required
-      />
-      <button type="submit">Send Message</button>
-    </form>
-  );
-};
+    <div className='contact-form-overlay'>
+      <div className='contact-form-container'>
+        <div className="contact-form-title">
+          <h2>Contact Us</h2>
+          <img onClick={() => setShowContact(false)} src={assets.cross_icon} alt="Close" />
+        </div>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="name"
+            placeholder="სახელი"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="მეილი"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+          <textarea
+            name="message"
+            placeholder="თქვენი შეტყობინება"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          ></textarea>
+          <button type="submit" className="contact-form-button">Send Message</button>
+        </form>
+      </div>
+    </div>
+  )
+}
 
-export default ContactForm;
-    
+export default ContactForm

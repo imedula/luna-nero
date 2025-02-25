@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './App.css'
 import Navbar from './components/Navbar/Navbar'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home/Home'
@@ -12,9 +13,11 @@ const App = () => {
 
   const [showLogin,setShowLogin] = useState(false)
 
+  const [showContact, setShowContact] = useState(false)
+
   return (
     <>
-    {showLogin?<LoginPopup/>:<></>}
+    {showLogin?<LoginPopup setShowLogin={setShowLogin}/>:<></>}
       <div className='app'>
         <Navbar setShowLogin={setShowLogin} />
         <Routes>
@@ -24,7 +27,8 @@ const App = () => {
         </Routes>
       </div>
       <Footer />
-      <ContactForm />
+      <button className="contact-btn" onClick={() => setShowContact(true)}>მოგვწერეთ</button>
+    {showContact && <ContactForm setShowContact={setShowContact} />}
     </>
   )
 }

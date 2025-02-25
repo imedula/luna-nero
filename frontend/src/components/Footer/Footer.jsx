@@ -1,8 +1,6 @@
 import React from 'react'
 import './Footer.css'
 import { assets } from '../../assets/assets'
-import 'boxicons'
-
 
 const Footer = () => {
   return (
@@ -40,6 +38,10 @@ const Footer = () => {
             </ul>
         </div>
       </div>
+      {/* <button className="contact-button" onClick={() => setShowContact(true)}>
+        Open Contact Form
+      </button>
+      {showContact && <ContactForm setShowContact={setShowContact} />} */}
       <hr/>
       <p className="footer-copyright">© 2025 ყველა უფლება დაცულია</p>
     </div>
