@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom';
 
 const Navbar = ({setShowLogin}) => {
 
-  const [menu,setMenu] = useState("home");
+  const [menu,setMenu] = useState("menu");
 
 
   return (
     <div className='navbar'>
-      <img src={assets.logo} alt="" className='logo'  />
+      <Link to='/'><img src={assets.logo} alt="" className='logo'  /></Link>
       <ul className="navbar-menu">
         <Link to='/' onClick={()=>setMenu("home")} className={menu==="home"?"active":""}>მთავარი</Link>
         <a href='#footer' onClick={()=>setMenu("contact-us")} className={menu==="contact-us"?"active":""}>ჩვენს შესახებ</a>
@@ -19,7 +19,7 @@ const Navbar = ({setShowLogin}) => {
       <div className="navbar-right">
         <img src={assets.search_icon} alt="" />
         <div className="navbar-serach-icon">
-          <img src={assets.basket_icon} alt="" />
+          <Link to='/cart'><img src={assets.basket_icon} alt="" /></Link>
           <div className="dot"></div>
         </div>
         <button onClick={()=>setShowLogin(true)}>შესვლა</button>
