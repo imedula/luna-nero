@@ -8,7 +8,11 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-content-left">
             <img src={assets.logo} alt="" />
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod blanditiis voluptatem ab officia numquam itaque vel odio, quas eligendi rerum possimus iste, impedit aliquam. Fugit dolor maiores sint ea quis?</p>
+            <p>Luna Nero 🔮 შენი ძალა აქ იწყება! 🔮
+გრძნობ დაბლოკილ ენერგიას? ვერ აღწევ წარმატებას? ჩვენ ვიცით, როგორ შეცვალო ეს!
+✨ თილისმები, ტაროს დასტები, კრისტალები და მაგიური ნივთები – ყველაფერი, რაც საჭიროა შენი ენერგიის გასაძლიერებლად!
+⚡ პერსონალური რჩევისთვის დაგვიკავშირდი!
+🔗 ეწვიე Luna Nero-ს და იპოვე ის, რაც ზუსტად შენ გჭირდება!</p>
             <div className="footer-social-icons">
               <a href="https://www.facebook.com/profile.php?id=61566798553010&rdid=bRDD01HycZPBais1&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18W2VyZ4TK%2F" target='_blank'>
                 <img src={assets.facebook_logo} alt="Facebook" />
