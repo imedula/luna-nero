@@ -35,7 +35,7 @@ const Footer = () => {
             </ul>
         </div>
         <div className="footer-content-right">
-            <h2>GET IN TOUCH</h2>
+            <h2>დაგვიკავშირდით</h2>
             <ul>
                 <li>+995 577 888 999</li>
                 <li>contact@luna.com</li>

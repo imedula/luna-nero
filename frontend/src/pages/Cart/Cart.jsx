@@ -1,10 +1,13 @@
 import React, { useContext } from 'react'
 import './Cart.css'
 import { StoreContext } from '../../context/StoreContext'
+import { useNavigate } from 'react-router-dom'
 
 const Cart = () => {
 
-  const { cartItems, items_list, removeFromCart } = useContext(StoreContext)
+  const { cartItems, items_list, removeFromCart, getTotalCartAmount } = useContext(StoreContext)
+
+  const navigate = useNavigate();
 
 
   return (
@@ -40,28 +43,28 @@ const Cart = () => {
       </div>
       <div className="cart-bottom">
         <div className="cart-total">
-          <h2>Cart Total</h2>
+          <h2>კალათა</h2>
           <div>
             <div className="cart-total-detalis">
-              <p>Subtotal</p>
-              <p>{0}</p>
+              <p>ღირებულება</p>
+              <p>₾{getTotalCartAmount()}</p>
             </div>
             <hr />
             <div className="cart-total-detalis">
               <p>მიტანის საფასური</p>
-              <p>{2}</p>
+              <p>₾{2}</p>
             </div>
             <hr />
             <div className="cart-total-detalis">
               <b>სულ</b>
-              <b>{0}</b>
+              <b>₾{getTotalCartAmount()+2}</b>
             </div>
           </div>
-          <button>PROCEED TO CHECKOUT</button>
+          <button onClick={()=>navigate('/order')}>გადახდა</button>
         </div>
         <div className="cart-promocode">
           <div>
-            <p>If you have promo code, Enter it here</p>
+            <p>შეიყვანე პრომო კოდი</p>
             <div className="cart-promocode-input">
               <input type="text" placeholder='promo code' />
               <button>Submit</button>
