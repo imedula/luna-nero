@@ -68,7 +68,7 @@
     color: #fff;
   }
   
-  /* button {
+  /* .place-order .cart-total button {
     width: 100%;
     padding: 1rem;
     background: #7f58ff;
@@ -81,9 +81,9 @@
     margin-top: 1rem;
   } */
   
-  button:hover {
+  /* button:hover {
     background: #6841e4;
-  }
+  } */
   
   @media (max-width: 768px) {
     .place-order {

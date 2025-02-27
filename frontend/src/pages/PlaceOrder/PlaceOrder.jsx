@@ -39,12 +39,12 @@ const {getTotalCartAmount} = useContext(StoreContext)
             <hr />
             <div className="cart-total-detalis">
               <p>მიტანის საფასური</p>
-              <p>₾{2}</p>
+              <p>₾{getTotalCartAmount()===0?0:5}</p>
             </div>
             <hr />
             <div className="cart-total-detalis">
               <b>სულ</b>
-              <b>₾{getTotalCartAmount()+2}</b>
+              <b>₾{getTotalCartAmount()===0?0:getTotalCartAmount()+5}</b>
             </div>
           </div>
           <button>გადახდა</button>

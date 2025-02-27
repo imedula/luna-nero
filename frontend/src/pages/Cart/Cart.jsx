@@ -52,12 +52,12 @@ const Cart = () => {
             <hr />
             <div className="cart-total-detalis">
               <p>მიტანის საფასური</p>
-              <p>₾{2}</p>
+              <p>₾{getTotalCartAmount()===0?0:5}</p>
             </div>
             <hr />
             <div className="cart-total-detalis">
               <b>სულ</b>
-              <b>₾{getTotalCartAmount()+2}</b>
+              <b>₾{getTotalCartAmount()===0?0:getTotalCartAmount()+5}</b>
             </div>
           </div>
           <button onClick={()=>navigate('/order')}>გადახდა</button>
@@ -67,7 +67,7 @@ const Cart = () => {
             <p>შეიყვანე პრომო კოდი</p>
             <div className="cart-promocode-input">
               <input type="text" placeholder='promo code' />
-              <button>Submit</button>
+              <button>გაგზავნა</button>
             </div>
           </div>
         </div>
