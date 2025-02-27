@@ -20,7 +20,7 @@ const Navbar = ({setShowLogin}) => {
         <a href='#explore-menu' onClick={()=>setMenu("menu")} className={menu==="menu"?"active":""}>პროდუქტები</a>
       </ul>
       <div className="navbar-right">
-        <img src={assets.search_icon} alt="" />
+        {/* <img src={assets.search_icon} alt="" /> */}
         <div className="navbar-serach-icon">
           <Link to='/cart'><img src={assets.basket_icon} alt="" /></Link>
           <div className={getTotalCartAmount()===0?"":"dot"}></div>
