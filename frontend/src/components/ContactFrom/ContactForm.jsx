@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './ContactForm.css'
 import { assets } from '../../assets/assets'
+import Swal from 'sweetalert2'
 
 const ContactForm = ({ setShowContact }) => {
   const [formData, setFormData] = useState({
@@ -15,9 +16,36 @@ const ContactForm = ({ setShowContact }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(formData)
-    // Add form submission logic here
+    console.log(formData);
+    onSubmit(e);
   }
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "6eda086b-5efe-4985-88e9-f8a5c64eae6c");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    }).then((res) => res.json());
+
+    if (res.success) {
+      Swal.fire({
+        title: "Success!",
+        text: "შეტყობინება გაიგზავნა!",
+        icon: "success"
+      });
+    }
+  };
 
   return (
     <div className='contact-form-overlay'>
