@@ -45,6 +45,7 @@ import selector_icon from './selector_icon.png'
 import tiktok_logo from'./tiktok_logo.png'
 import instagram_logo from './instagram_logo.png'
 import facebook_logo from './facebook_logo.png'
+import profile_icon from './profile_icon.png'
 
 
 
@@ -65,7 +66,8 @@ export const assets = {
     logo,
     search_icon,
     basket_icon,
-    header_room
+    header_room,
+    profile_icon
 }
 
 export const menu_list = [

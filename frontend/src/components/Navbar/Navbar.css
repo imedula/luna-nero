@@ -67,6 +67,46 @@
     top: -8px;
     right: -8px;
 }
+.navbar-profile {
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-profile-dropdown {
+    width: 120px;
+    height: 150px;
+    position: absolute;
+    z-index: 1;
+    background-color: transparent;
+    padding: 12px 25px;
+    border-radius: 4px 50px 50px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    transform: translateY(-10px);
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-profile:hover .nav-profile-dropdown {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+.nav-profile-dropdown li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.nav-profile-dropdown img {
+    width: 20px;
+}
+.nav-profile-dropdown li:hover {
+    color: white;
+}
 @media (max-width:1050px) {
     .navbar .logo {
         width: 120px;
