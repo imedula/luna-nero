@@ -9,7 +9,7 @@ import 'boxicons/css/boxicons.min.css';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <BrowserRouter basename="/luna-nero">
+    <BrowserRouter basename="/">
         <StoreContextProvider>
             <App />
         </StoreContextProvider>
