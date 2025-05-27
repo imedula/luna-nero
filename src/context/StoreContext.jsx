@@ -8,8 +8,8 @@ const StoreContextProvider = (props) => {
 
     const [cartItems, setCartItems] = useState({});
     const url = process.env.VITE_API_URL;
-    const [token,setToken] = useState("")
-    const [items_list,setItemList] = useState([])
+    const [token, setToken] = useState("")
+    const [items_list, setItemList] = useState([])
 
     const addToCart = async (itemId) => {
         if (!cartItems[itemId]) {
@@ -19,14 +19,14 @@ const StoreContextProvider = (props) => {
             setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }))
         }
         if (token) {
-            await axios.post(url+"/api/cart/add",{itemId},{headers:{token}})
+            await axios.post(url + "/api/cart/add", { itemId }, { headers: { token } })
         }
     }
 
     const removeFromCart = async (itemId) => {
         setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
         if (token) {
-            await axios.post(url+"/api/cart/remove",{itemId},{headers:{token}})
+            await axios.post(url + "/api/cart/remove", { itemId }, { headers: { token } })
         }
     }
 
@@ -42,17 +42,17 @@ const StoreContextProvider = (props) => {
     }
 
     const fetchItemList = async () => {
-        const response = await axios.get(url+"/api/item/list");
+        const response = await axios.get(url + "/api/item/list");
         setItemList(response.data.data)
     }
 
     const loadCartData = async (token) => {
-        const response = await axios.post(url+"/api/cart/get",{},{headers:{token}});
+        const response = await axios.post(url + "/api/cart/get", {}, { headers: { token } });
         setCartItems(response.data.cartData);
     }
-    
 
-    useEffect(()=>{
+
+    useEffect(() => {
         async function loadData() {
             await fetchItemList();
             if (localStorage.getItem("token")) {
@@ -61,7 +61,7 @@ const StoreContextProvider = (props) => {
             }
         }
         loadData();
-    },[])
+    }, [])
 
     const ContextValue = {
         items_list,
