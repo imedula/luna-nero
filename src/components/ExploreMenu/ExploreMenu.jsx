@@ -1,9 +1,10 @@
 import React from 'react'
 import './ExploreMenu.css'
-import { menu_list } from '../../assets/assets'
+import { items_list, menu_list } from '../../assets/assets'
 
 
 const ExploreMenu = ({category,setCategory}) => {
+  console.log(menu_list)
   return (
     <div className='explore-menu' id='explore-menu'>
      <h1>შეაბიჯე სიბნელის მაგიურ ლაბირინთში</h1> 
@@ -17,6 +18,7 @@ Luna Nero-ში დაგხვდება 12 უნიკალური კ�
 🔮 Luna Nero – მაგია შენს ხელშია!</p>
      <div className="explore-menu-list">
       {menu_list.map((item,index)=>{
+        console.log(item.menu_name);
         return (
           <div onClick={()=>setCategory(prev=>prev===item.menu_name?"All":item.menu_name)} key={index} className='explore-menu-list-item'>
             <img className={category===item.menu_name?"active":""} src={item.menu_image} alt="" />

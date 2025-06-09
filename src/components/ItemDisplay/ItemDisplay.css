@@ -13,11 +13,44 @@
     row-gap: 50px;
 }
 .item-display-list img {
-    width: 100%;        /* Makes image responsive */
-    max-height: 120px;  /* Limits the height */
-    object-fit: cover;  /* Ensures the image maintains aspect ratio */
+    width: 100%;        
+    max-height: 120px;  
+    object-fit: cover;  
 }
 
 
-/*1:19*/
-/* https://www.youtube.com/watch?v=DBMPXJJfQEA&t=4543s */
+
+.item-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Hide description by default */
+.item-description {
+    display: none; /* Hidden initially */
+    background: #f9f9f9;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Show description when the item is selected */
+  .item-container .item-description {
+    display: block;
+  }
+  
+  .item-description p {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .item-description button {
+    margin-top: 5px;
+    padding: 5px 10px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }

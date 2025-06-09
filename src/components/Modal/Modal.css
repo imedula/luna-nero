@@ -1,0 +1,111 @@
+/* Overlay Background */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(6px);
+    animation: fadeIn 0.5s ease;
+    transition: opacity 0.3s ease;
+}
+
+/* Modal Container */
+.modal-container {
+    background: #1e1e2f;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    padding: 20px; /* Уменьшаем отступы для адаптации */
+    width: 90vw; /* Используем vw для адаптивной ширины */
+    max-width: 500px; /* Ограничиваем максимальную ширину */
+    animation: scaleUp 0.4s ease;
+    text-align: center;
+    color: #fff;
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+/* Title Section */
+.modal-title {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px; /* Уменьшаем отступ для адаптации */
+}
+
+.modal-title button {
+    background: none;
+    border: none;
+    font-size: 20px; /* Уменьшаем размер шрифта для адаптации */
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Image Styles */
+.modal-container img {
+    max-width: 100%;
+    height: auto;
+    margin: 15px 0; /* Уменьшаем отступы для адаптации */
+    border-radius: 10px;
+}
+
+/* Text Styles */
+.modal-container p {
+    text-align: left;
+    margin: 8px 0; /* Уменьшаем отступы для адаптации */
+    line-height: 1.5; /* Уменьшаем межстрочный интервал для адаптации */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.7);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Медиа-запросы для маленьких экранов */
+@media (max-width: 600px) {
+    .modal-container {
+        padding: 15px;
+        width: 95vw; /* Увеличиваем ширину для маленьких экранов */
+    }
+
+    .modal-title {
+        margin-bottom: 10px;
+    }
+
+    .modal-title button {
+        font-size: 18px;
+    }
+
+    .modal-container img {
+        margin: 10px 0;
+    }
+
+    .modal-container p {
+        margin: 5px 0;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 400px) {
+    .modal-container {
+        padding: 10px;
+    }
+}

@@ -4,10 +4,15 @@ import { StoreContext } from '../../context/StoreContext'
 import { useNavigate } from 'react-router-dom'
 
 const Cart = () => {
-
-  const { cartItems, items_list, removeFromCart, getTotalCartAmount, url } = useContext(StoreContext)
-
+  const { cartItems, items_list, removeFromCart, getTotalCartAmount, url } = useContext(StoreContext);
   const navigate = useNavigate();
+
+  const totalAmount = getTotalCartAmount();
+  const deliveryFee = totalAmount === 0 ? 0 : 5;
+
+  if (Object.keys(cartItems).length === 0 || totalAmount === 0) {
+    return <div className="cart">კალათა ცარიელია</div>;
+  }
 
 
   return (
@@ -26,14 +31,14 @@ const Cart = () => {
         {items_list.map((item, index) => {
           if (cartItems[item._id] > 0) {
             return (
-              <div key={item._id}>   {/* Add key here */}
+              <div key={item._id}>
                 <div className='cart-items-title cart-items-item'>
-                  <img src={url+"/images/"+item.image} alt="" />
+                  <img src={url + "/images/" + item.image} alt="" />
                   <p>{item.name}</p>
                   <p>₾{item.price}</p>
                   <p>{cartItems[item._id]}</p>
                   <p>₾{item.price * cartItems[item._id]}</p>
-                  <p onClick={() => removeFromCart(item._id)} className='cross'>X</p> 
+                  <p onClick={() => removeFromCart(item._id)} className='cross'>X</p>
                 </div>
                 <hr />
               </div>
@@ -52,15 +57,15 @@ const Cart = () => {
             <hr />
             <div className="cart-total-detalis">
               <p>მიტანის საფასური</p>
-              <p>₾{getTotalCartAmount()===0?0:5}</p>
+              <p>₾{getTotalCartAmount() === 0 ? 0 : 5}</p>
             </div>
             <hr />
             <div className="cart-total-detalis">
               <b>სულ</b>
-              <b>₾{getTotalCartAmount()===0?0:getTotalCartAmount()+5}</b>
+              <b>₾{getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 5}</b>
             </div>
           </div>
-          <button onClick={()=>navigate('/order')}>გადახდა</button>
+          <button onClick={() => navigate('/order')}>გადახდა</button>
         </div>
         <div className="cart-promocode">
           <div>

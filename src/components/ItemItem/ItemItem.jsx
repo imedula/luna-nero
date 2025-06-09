@@ -1,55 +1,74 @@
-import React, { useContext, useState } from 'react'
-import './ItemItem.css'
-import { assets } from '../../assets/assets'
-import { StoreContext } from '../../context/StoreContext'
+import React, { useContext, useState } from 'react';
+import './ItemItem.css';
+import { assets } from '../../assets/assets';
+import { StoreContext } from '../../context/StoreContext';
+import Modal from '../Modal/Modal';
 
-const ItemItem = ({id, name, price, description, image}) => {
+const ItemItem = ({ id, name, price, description, image }) => {
+    const { cartItems, addToCart, removeFromCart, url } = useContext(StoreContext);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [rating, setRating] = useState(0);
 
-    const {cartItems,addToCart,removeFromCart,url} = useContext(StoreContext);
+    const handleOpenModal = () => {
+        setIsModalOpen(true);
+    };
 
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+    };
 
-  const [rating, setRating] = useState(0)  // State to manage rating
+    const handleRating = (rate) => {
+        setRating(rate);
+    };
 
-  const handleRating = (rate) => {
-    setRating(rate)
-  }
-
-  return (
-    <div className='item-item'>
-      <div className="item-item-img-container">
-        <img className='item-item-image' src={url+"/images/"+image} alt="" />
-        {!cartItems[id]
-            ?<img className='add' onClick={()=>addToCart(id)} src={assets.add_icon_white} alt='' />
-            :<div className='item-item-counter'>
-                <img onClick={()=>removeFromCart(id)} src={assets.remove_icon_red} alt="" />
-                <p>{cartItems[id]}</p>
-                <img onClick={()=>addToCart(id)} src={assets.add_icon_green} alt="" />
+    return (
+        <div className="item-item">
+            <div className="item-item-img-container">
+                <img className="item-item-image" src={url + "/images/" + image} alt="" />
+                {!cartItems[id] ? (
+                    <img className="add" onClick={() => addToCart(id)} src={assets.add_icon_white} alt="" />
+                ) : (
+                    <div className="item-item-counter">
+                        <img onClick={() => removeFromCart(id)} src={assets.remove_icon_red} alt="" />
+                        <p>{cartItems[id]}</p>
+                        <img onClick={() => addToCart(id)} src={assets.add_icon_green} alt="" />
+                    </div>
+                )}
             </div>
-        }
-      </div>
-      <div className='item-item-info'>
-        <div className="item-item-name-rating">
-          <p>{name}</p>
-          <div className="item-rating">
-            {[...Array(5)].map((star, index) => {
-              const ratingValue = index + 1
-              return (
-                <span
-                  key={index}
-                  className={`star ${ratingValue <= rating ? "active" : ""}`}
-                  onClick={() => handleRating(ratingValue)}
-                >
-                  ★
-                </span>
-              )
-            })}
-          </div>
+            <div className="item-item-info">
+                <div className="item-item-name-rating">
+                    <p>{name}</p>
+                    <div className="item-rating">
+                        {[...Array(5)].map((star, index) => {
+                            const ratingValue = index + 1;
+                            return (
+                                <span
+                                    key={index}
+                                    className={`star ${ratingValue <= rating ? "active" : ""}`}
+                                    onClick={() => handleRating(ratingValue)}
+                                >
+                                    ★
+                                </span>
+                            );
+                        })}
+                    </div>
+                </div>
+                {/* description hiden */}
+                <button className="read-more-button" onClick={handleOpenModal}>
+                    აღწერა
+                </button>
+                <p className="item-item-price">₾ {price}</p>
+            </div>
+            {isModalOpen && (
+                <Modal onClose={handleCloseModal}>
+                    <h2>{name}</h2>
+                    <img className="item-item-image" src={url + "/images/" + image} alt={name} />
+                    <p>{description}</p> {/* description model window */}
+                    <p>₾ {price}</p>
+                </Modal>
+            )}
         </div>
-        <p className="item-item-desc">{description}</p>
-        <p className="item-item-price">₾ {price}</p>
-      </div>
-    </div>
-  )
-}
-export default ItemItem
-// 1:41
+    );
+};
+
+export default ItemItem;

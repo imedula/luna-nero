@@ -83,10 +83,10 @@
     list-style: none;
     display: flex;
     flex-direction: column;
+    right: 0;
     gap: 10px;
     opacity: 0;
     transform: translateY(-10px);
-    visibility: hidden;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
@@ -124,6 +124,10 @@
     .navbar-right button {
         padding: 8px 25px;
     }
+    .nav-profile-dropdown {
+        top: 100%;
+        right: 10px;
+    }
 }
 @media (max-width:900px) {
     .navbar .logo {
@@ -150,3 +154,4 @@
         display: none;
     }
 }
+

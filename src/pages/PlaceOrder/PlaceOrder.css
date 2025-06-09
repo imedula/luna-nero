@@ -62,6 +62,11 @@
     padding: 0.5rem 0;
     border-bottom: 1px solid #444;
   }
+  .cart-total {
+    background: transparent; /* Removes background */
+    padding: 1rem; /* Keeps spacing */
+    border-radius: 0.5rem; /* Optional: Adjust if needed */
+}
   
   .cart-total-detalis b {
     font-size: 1.2rem;

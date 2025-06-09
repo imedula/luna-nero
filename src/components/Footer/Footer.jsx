@@ -3,6 +3,8 @@ import './Footer.css'
 import { assets } from '../../assets/assets'
 
 const Footer = () => {
+  
+
   return (
     <div className='footer' id='footer'>
       <div className="footer-content">
@@ -28,7 +30,6 @@ const Footer = () => {
         <div className="footer-content-center">
             <h2>Luna Nero</h2>
             <ul>
-                <li>მთავარი</li>
                 <li>ჩვენს შესახებ</li>
                 <li>მომსახურება</li>
                 <li>კონფიდენციალობის პოლიტიკა</li>
@@ -37,8 +38,8 @@ const Footer = () => {
         <div className="footer-content-right">
             <h2>დაგვიკავშირდით</h2>
             <ul>
-                <li>+995 577 888 999</li>
-                <li>contact@luna.com</li>
+                <li>+995 568 77 86 09</li>
+                <li>Lunanerocentr@outlook.com</li>
             </ul>
         </div>
       </div>
